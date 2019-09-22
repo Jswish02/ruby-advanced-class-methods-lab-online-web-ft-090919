@@ -7,14 +7,22 @@ end
   def self.all
     @@all
   end
-def song_create
-  song.create = song
-end
-def new_by_name
-  new_by_name = name
-end
   def save
-    self.class.all << self
+    self.class.all << self 
   end
-
+def self.create
+  song = Song.new 
+  song.save
+  song
+  
+end
+def self.new_by_name(song_name)
+  song = self.new 
+  song.name = song _name
+  song
+end
+  def self.create_by_name(song_name)
+    song = self.create  
+    song.name = song_name
+    song
 end
